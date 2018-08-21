@@ -1,0 +1,58 @@
+/*
+ * @Author: hcxowe 
+ * @Date: 2018-08-21 17:15:42 
+ * @Last Modified by: hcxowe
+ * @Last Modified time: 2018-08-21 17:20:05
+ * @Description: 按钮样式
+ */
+
+@import './color.less';
+
+.h-button {
+    display: inline-block;
+    padding: 9px 15px;
+    line-height: 20px;
+    min-width: 50px;
+    font-size: 14px;
+    text-align: center;
+    color: @dark;
+    border: 1px solid @borderNormal;
+    border-radius: @borderRadius;
+    background-color: @white;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: border-color .15s, background-color .15s, opacity .15s;
+    cursor: pointer;
+    overflow: visible;
+    text-decoration: none;
+    user-select: none;
+
+    &:hover {
+        color: @dark;
+        border-color: @borderHover;
+        text-decoration: none;
+    }
+
+    &:not(.disabled):active {
+        background-color: @light;
+    }
+
+    div& {
+        display: block;
+    }
+
+    input&,
+    button& {
+        height: 20px;
+        box-sizing: content-box;
+    }
+}
+
+button,
+[type="button"],
+[type="submit"] {
+	outline: 0;
+}
+
+
+
